@@ -18,18 +18,19 @@ public class Controller {
      /**
      * Référence à la vue MVC de notre application.
      */
-    // VOTRE CODE ICI...
+    private View refView;
 
     /**
      * Référence au service CPU de notre application.
      */
-    // VOTRE CODE ICI...
+    private ServiceCPU refServiceCPU;
 
     /**
      * Constructeur de la classe Controller. Les attributs de la classe Controller sont initialisés à null.
      */
-    public Controller() {
-        // VOTRE CODE ICI...
+    public Controller(View refView, ServiceCPU refServiceCPU) {
+        this.refView = refView;
+        this.refServiceCPU = refServiceCPU;
     }
 
     /**
@@ -53,8 +54,6 @@ public class Controller {
         getRefServiceCPU().ajouterUnNouveau(new CPU("Intel Core i7 (Quad)", 2008, 731000000, 82300));
         getRefServiceCPU().ajouterUnNouveau(new CPU("Intel Core i7 (Gulftown)", 2010, 1170000000, 147600));
         getRefServiceCPU().ajouterUnNouveau(new CPU("Intel Core i7 (Haswell-E)", 2014, 2600000000L, 238310));
-        getRefServiceCPU().ajouterUnNouveau(new CPU("Oracle SPARC M7", 2015, 10000000000L));
-
         // Demander la taille de notre liste de CPU
         int tailleListeCPU = getRefServiceCPU().tailleDeLaListe();
 
@@ -85,7 +84,7 @@ public class Controller {
      * @return la référence à la vue de l'application MVC "Processeur"
      */
     public View getRefView() {
-        // VOTRE CODE ICI...
+        return refView;
     }
 
     /**
@@ -94,7 +93,7 @@ public class Controller {
      * @param refView référence à la vue de l'application MVC "Processeur"
      */
     public void setRefView(View refView) {
-        // VOTRE CODE ICI...
+        this.refView = refView;
     }
 
     /**
@@ -103,7 +102,7 @@ public class Controller {
      * @return la référence au service CPU de l'application MVC "Processeur"
      */
     public ServiceCPU getRefServiceCPU() {
-        // VOTRE CODE ICI...
+        return refServiceCPU;
     }
 
     /**
@@ -112,7 +111,7 @@ public class Controller {
      * @param refServiceCPU référence au service CPU de l'application MVC "Processeur"
      */
     public void setRefServiceCPU(ServiceCPU refServiceCPU) {
-        // VOTRE CODE ICI...
+        this.refServiceCPU = refServiceCPU;
     }
 
 }

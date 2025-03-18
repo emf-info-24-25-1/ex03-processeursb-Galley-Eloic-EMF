@@ -68,9 +68,8 @@ private double mips;
      * @param annee       l'année de sortie du CPU
      * @param transistors le nombre de transistors utilisés dans le CPU
      */
-    public CPU(String nom, int annee, long transistors) {
+    public CPU(String nom, long transistors) {
         this.nom = nom;
-        this.annee = annee;
         this.transistors = transistors;
     }
 
